@@ -1,28 +1,31 @@
 #include<iostream>
 using namespace std;
 
-
-
-void Changearr(int arr[3], int size)
+void reverse(int arr[5],int start, int stop)
 {
-    for(int i=0; i<size; i++)
+    while(start<stop)
     {
-        arr[i]= 2*arr[i];
+        swap(arr[start],arr[stop]);
+    
+        start++;
+        stop--;
+   
     }
-    cout<<"hi";
+
 }
+
+
 int main()
 {
-int arr[3]={2,4,6};
-Changearr(arr,3);
-cout<<"In main"<<endl;
-for(int i=0; i<3; i++)
-{
-    cout<<arr[i];
-}
 
-
-
-
+    int arr[5]={1,2,3,4,5};
+    int size=5;
+   int start=0;
+   int stop=size-1; 
+   reverse(arr,start,stop);
+    for(int i=0; i<size; i++)
+    {
+        cout<<arr[i]<<endl;
+    }
 
 }
